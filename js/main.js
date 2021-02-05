@@ -1,11 +1,4 @@
-let a = 32;
-let b = 10;
-let c = 2;
-
-console.log(a);
-console.log(a + b);
-console.log(a * b + c);
-
-
-let namn = "Lorens";
-console.log(namn);
+let todos = ["Frukost", "Lunch", "Middag"]
+let listRoot = document.querySelector("#list-root");
+let listForm = document.querySelector("[data-list-form]")
+let listInput = document.querySelector("[data-list-input")
