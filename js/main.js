@@ -1,4 +1,4 @@
-let todos = ["Frukost", "Lunch", "Middag"]
+let todos = []
 let listRoot = document.querySelector("#list-root");
 let listForm = document.querySelector("[data-list-form]")
 let listInput = document.querySelector("[data-list-input")
@@ -24,17 +24,17 @@ function todoList(items) {
   });
   return list;
 }
-
-function removeItem(event) {
+function removeItem(event){
   let itemToRemove = event.target.innerText;
+  console.log("Removing item: " + itemToRemove);
   todos = todos.filter((item) => item !== itemToRemove);
   updateList();
 }
-
-function updateList() {
+function updateList(){
   listRoot.innerHTML = "";
   listRoot.append(todoList(todos));
 }
+
 
 updateList();
 
