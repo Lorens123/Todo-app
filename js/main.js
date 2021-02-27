@@ -19,11 +19,14 @@ function todoList(items) {
     let todoListItem = document.createElement("li");
     todoListItem.innerText = item;
     todoListItem.classList.add("todo-list-item");
-    todoListItem.addEventListener("click", removeItem);
+    todoListItem.addEventListener("click", function(){
+      todoListItem.style.textDecoration = "line-through"});
+    todoListItem.addEventListener("dblclick", removeItem);
     list.append(todoListItem);
   });
   return list;
 }
+
 function removeItem(event){
   let itemToRemove = event.target.innerText;
   console.log("Removing item: " + itemToRemove);
