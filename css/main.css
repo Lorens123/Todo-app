@@ -45,3 +45,7 @@ h2 {
 input[type="text"] {
   background: red;
 }
+button {
+  background-color: transparent;
+  border: none;
+}
